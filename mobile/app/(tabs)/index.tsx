@@ -1,14 +1,30 @@
-import { Link } from "expo-router";
-import { View, Text } from "react-native";
+import { View, Button, Text } from "react-native";
+import { useAuth } from "@clerk/expo";
+import { useRouter } from "expo-router";
 
-export default function Home() {
+export default function Dashboard() {
+  const { signOut } = useAuth();
+  const router = useRouter();
+
+  const handleLogout = async () => {
+    await signOut();
+    router.replace("/auth/sign-in");
+  };
+
   return (
-    <View style={{ padding: 20 }}>
-      <Text>IMS Home</Text>
+    <View
+      style={{
+        flex: 1,
+        justifyContent: "center",
+        alignItems: "center",
+      }}
+    >
+      <Text>Welcome to IMS Dashboard</Text>
 
-      <Link href="/sign-in">Go to Sign In</Link>
-
-      <Link href="/sign-up">Go to Sign Up</Link>
+      <Button
+        title="Logout"
+        onPress={handleLogout}
+      />
     </View>
   );
 }
