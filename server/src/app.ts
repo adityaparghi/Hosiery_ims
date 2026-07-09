@@ -4,6 +4,8 @@ import dashboardRouter from "./routes/dashboard.js";
 import { errorHandler } from "./middlewares/errorHandler.js";
 import inventoryRouter from "./routes/inventory.js";
 import stockRouter from "./routes/stock.js";
+import reportRouter from "./routes/reports.js";
+import productRouter from "./routes/products.js";
 
 const app = express();
 
@@ -13,6 +15,8 @@ app.use(express.json());
 app.use("/api/dashboard", dashboardRouter);
 app.use("/api/inventory", inventoryRouter);
 app.use("/api/stock", stockRouter);
+app.use("/api/reports", reportRouter);
+app.use("/api/products", productRouter);
 
 app.use(errorHandler);
 
