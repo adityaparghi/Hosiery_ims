@@ -178,6 +178,12 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: "#F8FAFC",
     padding: 20,
+
+  },
+
+
+  containerInventoryHeader: {
+    gap: 50,
   },
   paginationRow: {
     flexDirection: "row",

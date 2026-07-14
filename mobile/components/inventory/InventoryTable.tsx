@@ -25,7 +25,6 @@ export default function InventoryTable({ items, loading }: InventoryTableProps) 
           <View style={styles.headerRow}>
             <Text style={styles.headerCell}>SKU</Text>
             <Text style={styles.headerCell}>PRODUCT</Text>
-            <Text style={styles.headerCell}>MODEL</Text>
             <Text style={styles.headerCell}>COLOR</Text>
             <Text style={styles.headerCell}>SIZE</Text>
             <Text style={styles.headerCell}>PURCHASE</Text>
@@ -59,19 +58,18 @@ const styles = StyleSheet.create({
   },
   headerRow: {
     flexDirection: "row",
-    alignItems: "center",
+    paddingHorizontal: 12,
     paddingVertical: 10,
     borderBottomWidth: 1,
     borderBottomColor: "#E5E7EB",
   },
   headerCell: {
-    flex: 1,
-    minWidth: 110,
-    fontSize: 12,
-    fontWeight: "700",
-    color: "#6B7280",
-    textTransform: "uppercase",
-    paddingRight: 8,
+ width: 140,
+  fontSize: 12,
+  fontWeight: "700",
+  color: "#6B7280",
+  textTransform: "uppercase",
+  paddingRight: 8,
   },
   bodyScroll: {
     maxHeight: 420,
