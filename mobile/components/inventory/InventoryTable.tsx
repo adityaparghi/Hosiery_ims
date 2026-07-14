@@ -47,6 +47,7 @@ export default function InventoryTable({ items, loading }: InventoryTableProps) 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    minHeight: 420,
     backgroundColor: "#FFFFFF",
     borderRadius: 16,
     borderWidth: 1,
